@@ -40,7 +40,7 @@ To use this server with the Claude Desktop app, add the following configuration 
         "run", 
         "-i", 
         "--rm", 
-        "mcp/postgres", 
+        "ketanexpora/postgres-mcp", 
         "postgresql://host.docker.internal:5432/mydb"]
     }
   }
@@ -56,7 +56,7 @@ To use this server with the Claude Desktop app, add the following configuration 
       "command": "npx",
       "args": [
         "-y",
-        "@modelcontextprotocol/server-postgres",
+        "@ketanexpora/postgres-mcp",
         "postgresql://localhost/mydb"
       ]
     }
@@ -101,7 +101,7 @@ Optionally, you can add it to a file called `.vscode/mcp.json` in your workspace
           "run",
           "-i",
           "--rm",
-          "mcp/postgres",
+          "ketanexpora/postgres-mcp",
           "${input:pg_url}"
         ]
       }
@@ -127,7 +127,7 @@ Optionally, you can add it to a file called `.vscode/mcp.json` in your workspace
         "command": "npx",
         "args": [
           "-y",
-          "@modelcontextprotocol/server-postgres",
+          "@ketanexpora/postgres-mcp",
           "${input:pg_url}"
         ]
       }
@@ -141,7 +141,7 @@ Optionally, you can add it to a file called `.vscode/mcp.json` in your workspace
 Docker:
 
 ```sh
-docker build -t mcp/postgres -f src/postgres/Dockerfile . 
+docker build -t ketanexpora/postgres-mcp:latest . 
 ```
 
 ## License
